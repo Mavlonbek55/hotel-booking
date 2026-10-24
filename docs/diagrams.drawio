@@ -1,0 +1,212 @@
+<mxfile host="app.diagrams.net" pages="5">
+  <diagram id="Use_cases" name="Use cases">
+    <mxGraphModel dx="1030" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fillColor=none;" value="Hotel Booking App" vertex="1">
+          <mxGeometry height="440" width="440" x="200" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Guest" vertex="1">
+          <mxGeometry height="80" width="40" x="70" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Receptionist" vertex="1">
+          <mxGeometry height="80" width="40" x="730" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Search free rooms" vertex="1">
+          <mxGeometry height="70" width="280" x="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Book a room" vertex="1">
+          <mxGeometry height="70" width="280" x="280" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Cancel a booking" vertex="1">
+          <mxGeometry height="70" width="280" x="280" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="View a booking" vertex="1">
+          <mxGeometry height="60" width="280" x="280" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" edge="1" parent="1" source="c2" style="endArrow=none;html=1;" target="c4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" edge="1" parent="1" source="c2" style="endArrow=none;html=1;" target="c5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" edge="1" parent="1" source="c2" style="endArrow=none;html=1;" target="c6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" edge="1" parent="1" source="c3" style="endArrow=none;html=1;" target="c4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" edge="1" parent="1" source="c3" style="endArrow=none;html=1;" target="c5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" edge="1" parent="1" source="c3" style="endArrow=none;html=1;" target="c6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" edge="1" parent="1" source="c3" style="endArrow=none;html=1;" target="c7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Classes" name="Classes">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1" value="Room" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="200" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="+ room_id: string&lt;br&gt;+ kind: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;html=1;" vertex="1" parent="c1">
+          <mxGeometry x="0" y="26" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;html=1;borderStyle=none;" vertex="1" parent="c1">
+          <mxGeometry x="0" y="76" width="200" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="Booking" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="260" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="+ booking_id: string&lt;br&gt;+ guest: string&lt;br&gt;+ room_id: string&lt;br&gt;+ check_in: date&lt;br&gt;+ check_out: date&lt;br&gt;+ status: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;html=1;" vertex="1" parent="c4">
+          <mxGeometry x="0" y="26" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="+ overlaps(check_in, check_out): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;html=1;borderStyle=none;" vertex="1" parent="c4">
+          <mxGeometry x="0" y="156" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="BookingService" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="160" width="400" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="- rooms: list of Room&lt;br&gt;- bookings: dict of Booking" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;html=1;" vertex="1" parent="c7">
+          <mxGeometry x="0" y="26" width="400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" value="+ search_free_rooms(check_in, check_out): list of Room&lt;br&gt;+ book(guest, room_id, check_in, check_out): result, Booking&lt;br&gt;+ cancel(booking_id): bool&lt;br&gt;+ get_booking(booking_id): Booking&lt;br&gt;- _is_free(room_id, check_in, check_out): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;html=1;borderStyle=none;" vertex="1" parent="c7">
+          <mxGeometry x="0" y="76" width="400" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="owns 1..*" style="endArrow=open;endFill=0;html=1;edgeStyle=orthogonalEdgeStyle;startArrow=diamondThin;startFill=1;" edge="1" parent="1" source="c7" target="c1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="keeps 0..*" style="endArrow=open;endFill=0;html=1;edgeStyle=orthogonalEdgeStyle;startArrow=diamondThin;startFill=1;" edge="1" parent="1" source="c7" target="c4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="refers to (room_id)" style="endArrow=open;html=1;dashed=1;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="c4" target="c1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" value="One BookingService = one shared list of bookings = one place that checks clashes." style="shape=note;whiteSpace=wrap;html=1;align=left;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="400" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Sequence_-_book" name="Sequence - book">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1" value="Caller (Guest or Receptionist)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="BookingService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="Booking" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="1: book(guest, room_id, check_in, check_out)" style="html=1;endArrow=block;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="120" as="sourcePoint" />
+            <mxPoint x="360" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c5" value="2: _is_free(room_id, check_in, check_out)" style="html=1;endArrow=block;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="170" as="sourcePoint" />
+            <mxPoint x="360" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="170" />
+              <mxPoint x="430" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c6" value="3: create Booking (new id, Confirmed)" style="html=1;endArrow=block;verticalAlign=bottom;dashed=1;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="250" as="sourcePoint" />
+            <mxPoint x="620" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c7" value="4: Accepted, booking" style="html=1;endArrow=block;verticalAlign=bottom;dashed=1;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="310" as="sourcePoint" />
+            <mxPoint x="100" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c8" value="If _is_free is false: return Unavailable and create nothing (rule R3)." style="shape=note;whiteSpace=wrap;html=1;align=left;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="520" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Sequence_-_cancel" name="Sequence - cancel">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1" value="Caller (Guest or Receptionist)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="BookingService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="Booking" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="1: cancel(booking_id)" style="html=1;endArrow=block;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="120" as="sourcePoint" />
+            <mxPoint x="360" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c5" value="2: find booking by id" style="html=1;endArrow=block;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="170" as="sourcePoint" />
+            <mxPoint x="360" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="170" />
+              <mxPoint x="430" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c6" value="3: status = Cancelled" style="html=1;endArrow=block;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="250" as="sourcePoint" />
+            <mxPoint x="620" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c7" value="4: true" style="html=1;endArrow=block;verticalAlign=bottom;dashed=1;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="310" as="sourcePoint" />
+            <mxPoint x="100" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c8" value="If the id is unknown: return false and change nothing. A Cancelled booking no longer blocks the room (rule R4)." style="shape=note;whiteSpace=wrap;html=1;align=left;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="520" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Activity_-_book" name="Activity - book">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1" value="" style="ellipse;fillColor=#000000;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="20" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="Receive booking request (guest, room, dates)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;" vertex="1" parent="1">
+          <mxGeometry x="210" y="80" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="check_out after check_in?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="160" width="180" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
